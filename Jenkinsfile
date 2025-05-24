@@ -58,6 +58,20 @@ pipeline {
                     """
                 }
             }
+             stage('Update Launch Template') {
+            steps {
+                script {
+                    // Use double quotes so Groovy variables are substituted before running shell
+                    sh """
+                   aws autoscaling start-instance-refresh \
+                      --auto-scaling-group-name veera \
+                      --preferences MinHealthyPercentage=75,InstanceWarmup=300 \
+                      --region us-east-1 \
+                      --query 'InstanceRefreshId' --output text
+
+                    """
+                }
+            }
         }
     }
 }
