@@ -58,6 +58,7 @@ pipeline {
                     """
                 }
             }
+        )
              stage('Update Launch Template') {
                 steps {
                     script {
