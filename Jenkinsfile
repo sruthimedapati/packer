@@ -5,7 +5,7 @@ pipeline {
         AWS_REGION = 'us-east-1'
         LAUNCH_TEMPLATE_ID = 'lt-05ce0127e76f07ca5'
         ASG_NAME = "veera"
-        AWS_REGION = "us-east-1"
+        // AWS_REGION = "us-east-1"
         
     }
 
