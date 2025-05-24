@@ -54,7 +54,7 @@ pipeline {
                         --version-description "Updated with AMI ${NEW_AMI_ID}" \\
                         --source-version 1 \\
                         --launch-template-data '{"ImageId":"${NEW_AMI_ID}"}' \\
-                        --set-default-version \\
+                        --default-version ${newVer} \\
                         --region ${AWS_REGION}
                     """
                 }
