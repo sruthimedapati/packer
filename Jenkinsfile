@@ -16,7 +16,7 @@ pipeline {
         }
           stage('Packer Init') {
             steps {
-                sh 'packer init .'
+                sh 'packer init packer.pkr.hcl'
             }
         }
 
