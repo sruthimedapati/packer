@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+####veera
     environment {
         AWS_REGION = 'us-east-1'
         LAUNCH_TEMPLATE_ID = 'lt-04f4d7cd88876c81d'
@@ -23,7 +23,7 @@ pipeline {
 
         stage('Build AMI with Packer') {
             steps {
-                // Save output to packer.log
+                // Save output to packer.log####veera
                 sh '''
                    packer validate packer.pkr.hcl
                    packer build packer.pkr.hcl | tee packer.log
